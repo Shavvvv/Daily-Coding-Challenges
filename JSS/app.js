@@ -8,12 +8,19 @@ sayHello() //=> Hello!
 -----------------------------------------------------------------*/
 // Your solution for 00-sayHello (example) here:
 
-
+// Declared function sayHello()
 function sayHello() {
-    console.log("Hello!");
-};
+  return 'Hello!';
+}
 
+const mainEl = document.querySelector("body");
 
-sayHello();
-
-
+const title = document.createElement("h1");
+const text = "Day 1";
+title.innerText = text;
+mainEl.appendChild(title);
+const result = document.createElement("h3");
+const day1result = sayHello();
+result.innerText = day1result;
+mainEl.appendChild(result);
+console.log(sayHello)
