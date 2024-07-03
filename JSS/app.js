@@ -24,3 +24,24 @@ const day1result = sayHello();
 result.innerText = day1result;
 mainEl.appendChild(result);
 console.log(sayHello)
+
+/*-----------------------------------------------------------------
+Challenge: 01-addOne
+Difficulty: Basic
+Prompt:
+Write a function called addOne that takes a single number as an argument and returns that number plus 1.
+Examples:
+addOne(1) //=> 2
+addOne(-5) //=> -4
+-----------------------------------------------------------------*/
+// Your solution for 01-addOne here:
+
+// Delared function addOne
+function addOne(num) {
+  return (num+1)
+};
+// Test variable num
+const num = 24;
+
+// Print result to console
+console.log(addOne(num))
