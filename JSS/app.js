@@ -71,3 +71,34 @@ function addTwoNumbers(num1, num2) {
 }
 
 console.log(addTwoNumbers(5, 13)); // test print to console
+
+/*-----------------------------------------------------------------
+Challenge: 03-sumNumbers
+Difficulty: Basic
+Prompt:
+- Write a function called sumNumbers that accepts a single array of numbers and returns the sum of the numbers in the array.
+- If the array is empty, return 0 (zero).
+Examples:
+sumNumbers([10]) //=> 10
+sumNumbers([5, 10]) //=> 15
+sumNumbers([2, 10, -5]) //=> 7
+sumNumbers([]) //=> 0
+-----------------------------------------------------------------*/
+// Your solution for 03-sumNumbers here:
+
+// Declared function sumNumbers
+function sumNumbers(arr) {
+  // Data type to hold sum of array
+  let sum = 0;
+  // For loop used to iterate array
+  for (let i = 0; i < arr.length; i++) {
+    // Add each array element to sum at each iteration
+    sum += arr[i];
+  }
+  // Function returns the sum
+  return sum;
+}
+// Test data arr
+let arr = [2, 10, -5];
+// Print array to console
+console.log(sumNumbers(arr));
