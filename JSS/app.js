@@ -132,3 +132,49 @@ function addList(...numbers) {
   return total;
 }
 console.log("addList: " + addList(1, 50, 1.23));
+
+/*-----------------------------------------------------------------
+Challenge: 05-computeRemainder
+Difficulty: Basic
+Prompt:
+- Write a function named computeRemainder that accepts two numeric arguments and returns the remainder of the division of those two numbers.
+- The first argument should be the dividend and the second argument should be the divisor.
+- If a 0 is passed in as the second argument you should return JavaScript's special numeric value: Infinity.
+- For extra fun, complete this challenge without using the modulus (%) operator.
+Examples:
+computeRemainder(10,2) //=> 0
+computeRemainder(4,0) //=> Infinity
+computeRemainder(10.5, 3) //=> 1.5
+-----------------------------------------------------------------*/
+// Your solution for 05-computeRemainder:
+
+// Declared function computeRemainder
+function computeRemainder(firstVal, secondVal) {
+  // Declared and set variable that will retrurn a remainder
+  let remainder = 0;
+  // Checkt for second variable's zero equivalency, setting remainder to Infinity if true
+  if (secondVal === 0) {
+    remainder = Infinity;
+  } else
+    // sets remainder to the computed value from longDivision
+    remainder = longDivision(firstVal, secondVal);
+
+  return remainder;
+}
+// Declared helper function longDivision
+function longDivision(firstVal, secondVal) {
+  let first = firstVal;
+  let second = secondVal;
+  // While loop that reduces the first value by subtracting the second value, as this helps to observe the remainder
+  while (second < first) {
+    first -= second;
+    // Logical check to see if both numbers become equivalent at any point.
+    if (first === second) first -= second;
+  }
+
+  // Returnsthe value of first.
+  return first;
+}
+
+// Prints result to console
+console.log(computeRemainder(10, 0));
