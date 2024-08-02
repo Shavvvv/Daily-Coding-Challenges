@@ -178,3 +178,38 @@ function longDivision(firstVal, secondVal) {
 
 // Prints result to console
 console.log(computeRemainder(10, 0));
+
+/*-----------------------------------------------------------------
+Challenge: 06-range
+Difficulty: basic
+Prompt:
+- Write a function called range that accepts two integers as arguments and returns an array of integers starting with the first argument up to one less than the second argument.
+- The range function must be called with the first argument less than or equal to the second argument, otherwise return the string "First argument must be less than second".
+Examples:
+range(1,4) //=> [1,2,3]
+range(-2, 3) //=> [-2,-1,0,1,2]
+range(1,1) //=> []
+range(5,2) //=> "First argument must be less than second"
+-----------------------------------------------------------------*/
+// Your solution for 06-range here:
+
+function range(x, y) {
+  // Declared array
+  let arrayRange = []
+  // If statement to check if falues are in order
+  if (x > y) {
+    console.log("First argument must be less than second");
+  }
+  else {
+    // Loop to push valuees to array 
+    for (let i = x; i < y; i++) {
+      arrayRange.push(x)
+      x++
+    }
+    // Output of array after function is called
+    return arrayRange
+  }
+  
+}
+// Print to console
+console.log(range(1,1))
